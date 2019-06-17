@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Speech.AudioFormat;
 using System.Speech.Synthesis;
 
@@ -18,7 +17,7 @@ namespace TextToSpeech
             synth.SetOutputToDefaultAudioDevice();
             synth.SelectVoiceByHints(VoiceGender.Female);
 
-            synth.Speak($"Hello. My name is {synth.Voice.Name}. Type something and press enter, and I will say it.");
+            synth.Speak($"Hello. My name is {synth.Voice.Name}. Type something and press enter, and I will say it. Type QUIT to quit.");
 
             Console.WriteLine("What should I say? Type QUIT to quit.");
             Console.Write("> ");
