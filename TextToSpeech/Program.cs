@@ -5,9 +5,9 @@ using System.Speech.Synthesis;
 
 namespace TextToSpeech
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             PrintAllVoices();
 
@@ -17,6 +17,8 @@ namespace TextToSpeech
             synth.SetOutputToDefaultAudioDevice();
             synth.SelectVoiceByHints(VoiceGender.Female);
 
+            // We can't reference .NET Core from Framework.
+            // Class1.GenerateString();
             synth.Speak($"Hello. My name is {synth.Voice.Name}. Type something and press enter, and I will say it. Type QUIT to quit.");
 
             Console.WriteLine("What should I say? Type QUIT to quit.");
